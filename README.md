@@ -1,10 +1,9 @@
-docker-compose up -d influxdb grafana
-docker-compose run k6 run src/server.ts
+#### How to Run
 
+Run Docker Compose to set up Grafana and InfluxDB
 
-    - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
-      - GF_AUTH_ANONYMOUS_ENABLED=true
-      - GF_AUTH_BASIC_ENABLED=false  
-      - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
-      - GF_AUTH_ANONYMOUS_ENABLED=true
-      - GF_AUTH_BASIC_ENABLED=false
+``docker-compose up``
+
+Post data on DB and Grafana
+
+``yarn k6:test-local``
